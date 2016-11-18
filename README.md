@@ -9,18 +9,18 @@
 ## Build an image
 
 ```bash
-docker build -t abilisense/android .
+docker build -t abilisense/android-build .
 ```
 
 ## Run an interactive shell
 
 ```bash
-docker run -ti abilisense/android /bin/bash
+docker run -ti abilisense/android-build /bin/bash
 ```
 To build project from you local foder - change into it(cd) and run an interactive shell like this:
 ```bash
 docker run -ti --volume=${PWD}:/localDebugRepo --workdir="/localDebugRepo" \
-    --memory=4g --memory-swap=4g --entrypoint=/bin/bash abilisense/android
+    --memory=4g --memory-swap=4g --entrypoint=/bin/bash abilisense/android-build
 ```
 
 ##License and Copyright
